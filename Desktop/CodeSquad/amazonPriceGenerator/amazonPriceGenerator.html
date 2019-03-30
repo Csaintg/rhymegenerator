@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Amazon Price Generator</title>
+</head>
+<body>
+
+    <h1>Amazon Price Generator</h1>
+
+
+
+<script>
+
+let itemName = prompt ("What is the name of the item?");
+let basePrice = prompt ("What is the base price? (i.e. the price before markup/markdown)");
+let blackFriday = prompt ("Is today 'Black Friday'?");
+let searchEngine = prompt ("Did the purchaser find the product through a search engine?");
+let shopSite = prompt ("Did purchaser visit a comparison-shopping site?");
+let finalPrice = basePrice; 
+
+
+if (blackFriday === "yes") {
+    finalPrice = basePrice * .75;
+    let message1 = alert ("Since it's Black Friday, we will reduce the price by 25%." + "The new price will be " + finalPrice + " .");
+}
+if (searchEngine === "yes") {
+    finalPrice1 = finalPrice * 1.01;
+    let message2 = alert ("The purchaser came through a search engine, so we will increase the price by 1%. " + "The new price will be " + finalPrice1 + " .")
+}
+if (shopSite === "yes") {
+    finalPrice2 = finalPrice * .90;
+    let message3 = alert ("The purchaser visited a comparison-shopping site, so we will reduce the price by 10%." + "The new price will be " + finalPrice2 + " .");
+}
+alertText += alert ("The base price for a " + item + " is " + basePrice + "." + "We will increase the price by 1% to pay the search engine. This purchaser is a comparison shopper, so we will reduce the price by 10%. Since it's Black Friday, we will reduce the price by 25%. The final price is " + finalPrice + ".");
+alert (alertText)
+
+
+</script>
+    
+</body>
+</html>
